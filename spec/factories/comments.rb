@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :comment do
-    body Faker::Lorem.paragraph
+    body { Faker::Lorem.paragraph }
     parent_comment_id { create(:top_comment).id }
     association :link, factory: :link
     factory :top_comment do
