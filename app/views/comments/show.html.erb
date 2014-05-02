@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+
+<%= render 'comment', locals: {
+    comment: @comments_hash[nil],
+    comment_hash: @comments_hash } %>
+
+    <%= @comments_hash[nil] %>
+
+<%= link_to 'Edit', edit_comment_path(@comment) %> |
+<%= link_to 'Back', comments_path %>

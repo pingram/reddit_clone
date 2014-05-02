@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<ul>
+    <% @comments_hash[nil].each do |comment| %>
+      <%= render :partial => 'comments/comment', locals: { :this_comment => comment } %>
+    <% end %>
+</ul>
+
+<%= link_to 'Edit', edit_link_path(@link) %> |
+<%= link_to 'Back', links_path %>

@@ -1,0 +1,11 @@
+<h1>Users#new</h1>
+<p>Find me in app/views/users/new.html.erb</p>
+
+
+<form action="<%= users_url %>" method="post" accept-charset="utf-8">
+  <%= get_auth_token %>
+  <label for="username">Username</label><input type="text" name="user[username]" value="" id="username">
+  <label for="password">Password</label><input type="password" name="user[password]" value="" id="password">
+
+  <p><input type="submit" value="Sign Up"></p>
+</form>

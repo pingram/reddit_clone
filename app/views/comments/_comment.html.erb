@@ -1,0 +1,12 @@
+<ul>
+<%= this_comment.body %>
+
+<% @comments_hash[this_comment.id].each do |child_c| %>
+
+  <li>
+    <%= render :partial => 'comments/comment', locals: {
+        this_comment: child_c } %>
+  </li>
+
+<% end %>
+</ul>
